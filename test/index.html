@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--
+    viewport: 视窗
+    content:
+      width 为设备宽度
+      initial-scale 初始缩放 1 倍
+      maximum-scale 最大缩放 5 倍
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>test</title>
+  <!--
+    不管是 PC 端还是 Mobile 端，风格都是统一的，所以有一个共同样式
+   -->
+  <link rel="stylesheet" href="common.css">
+  <!-- PC 端 -->
+  <!--
+    orientation: landscape  手机横向
+   -->
+  <link media="(orientation: landscape) and (min-width: 1024px)" rel="stylesheet" href="desktop.css">
+  <!-- Mobile 端 -->
+  <link media="(max-width: 1024px)" rel="stylesheet" href="mobile.css">
+  <style>
+    #checkbox:checked ~ p {
+      /*background-color: blue;*/
+      display: none;
+      transition: all .3s;
+    }
+  </style>
+</head>
+<body>
+<input id="checkbox" type="checkbox">
+<p>AAA</p>
+</body>
+</html>
